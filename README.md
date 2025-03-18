@@ -1,66 +1,125 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Aprendiendo Laravel con Develoteca
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este repositorio documenta mi progreso y aprendizaje sobre Laravel mientras seguía un tutorial en YouTube del canal **Develoteca**. A continuación, se detallan los temas y conceptos que fui aprendiendo durante el tutorial.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Contenidos Aprendidos
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Introducción a Laravel
+- Descripción general de Laravel y su importancia en el desarrollo web moderno.
+- Ventajas de usar Laravel: sintaxis elegante, herramientas integradas y comunidad activa.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Herramientas necesarias
+- **Composer**: Gestor de dependencias para PHP.
+- **XAMPP**: Servidor local para desarrollo.
+- **Visual Studio Code**: Editor de código recomendado.
 
-## Learning Laravel
+### Instalación de Laravel
+- Creación de un nuevo proyecto usando Composer:
+  ```bash
+  composer create-project --prefer-dist laravel/laravel nombre-del-proyecto
+  ```
+- Configuración inicial del proyecto.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Estructura de un proyecto Laravel
+- Explicación de la estructura de carpetas y archivos:
+  - **app**: Lógica de la aplicación (controladores, modelos, etc.).
+  - **routes**: Definición de rutas.
+  - **resources**: Vistas y assets.
+  - **database**: Migraciones y seeders.
+  - **config**: Configuraciones de la aplicación.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Configuración de la base de datos
+- Conexión a la base de datos mediante el archivo `.env`.
+- Uso de **phpMyAdmin** para gestionar la base de datos.
+- Creación de una base de datos para el proyecto.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Rutas y Vistas
+- Definición de rutas en el archivo `web.php`.
+- Creación de vistas usando Blade.
+- Uso de la función `view()` para retornar vistas desde las rutas.
 
-## Laravel Sponsors
+### Personalización de Vistas
+- Modificación de vistas con HTML y Blade.
+- Uso de plantillas para reutilizar código (header, footer, etc.).
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Manejo de Rutas
+- Rutas con parámetros.
+- Rutas con nombres.
+- Grupos de rutas.
 
-### Premium Partners
+### Formularios y Método POST
+- Creación de formularios en Blade.
+- Manejo de datos enviados por POST en las rutas.
+- Uso de la función `request()` para obtener datos del formulario.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Controladores
+- Creación de controladores usando Artisan:
+  ```bash
+  php artisan make:controller NombreController
+  ```
+- Manejo de la lógica de la aplicación en controladores.
+- Validación de datos recibidos desde formularios.
 
-## Contributing
+### Blade Templates
+- Uso de plantillas Blade para crear vistas dinámicas.
+- Herencia de plantillas con `@extends` y `@section`.
+- Inclusión de componentes reutilizables.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Migraciones
+- Creación de migraciones para definir la estructura de la base de datos:
+  ```bash
+  php artisan make:migration create_nombre_tabla
+  ```
+- Ejecución de migraciones:
+  ```bash
+  php artisan migrate
+  ```
 
-## Code of Conduct
+### Modelos y Controladores
+- Creación de modelos y controladores en un solo comando:
+  ```bash
+  php artisan make:model NombreModelo -mc
+  ```
+- Relación entre modelos, controladores y la base de datos.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Mostrar Datos en Laravel
+- Consulta de datos desde la base de datos usando Eloquent.
+- Paso de datos desde el controlador a la vista.
+- Mostrar datos en una vista usando Blade.
 
-## Security Vulnerabilities
+### Proyecto Práctico
+- Desarrollo de un proyecto aplicando todos los conceptos aprendidos.
+- Integración de rutas, controladores, vistas, modelos y migraciones.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## Cómo usar este repositorio
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/JosefinaOller/laravel.git
+   ```
+2. Instala las dependencias de Composer:
+   ```bash
+   composer install
+   ```
+3. Configura el archivo `.env` con tus credenciales de base de datos.
+4. Ejecuta las migraciones:
+   ```bash
+   php artisan migrate
+   ```
+5. Inicia el servidor de desarrollo:
+   ```bash
+   php artisan serve
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## Recursos Adicionales
+- [Documentación oficial de Laravel](https://laravel.com/docs)
+- [Canal de YouTube Develoteca](https://www.youtube.com/c/Develoteca)
+
+---
+
+¡Gracias por seguir mi progreso! 
