@@ -9,9 +9,8 @@
 <body>
     <a href="/">Inicio</a> |
     <a href="/suma">Aplicación de la suma</a> |
-    <a href="#">Opción 3</a>
+    <a href="/productos">Productos</a>
     <br>
     @yield('content')
-    Hola Soy templeate
 </body>
 </html>
